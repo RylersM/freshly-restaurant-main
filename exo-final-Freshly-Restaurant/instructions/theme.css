@@ -1,0 +1,41 @@
+body{
+    width: 1400px;
+    margin-inline: auto;
+}
+.header img{
+    width: 30%;
+    text-align: center;
+}
+.location{
+    float: right;
+    margin: 0.2rem;
+    width: 45%;
+}
+h1, h2{
+    text-align: center;
+}
+.welcome{
+    padding-block: 2em;
+}
+.welcome p{
+    line-height: 1.5;
+}
+.menu div{
+    padding: 1em;
+    background-color: #817676;
+    margin: 2rem;
+}
+nav ul{
+    list-style: none;
+    background-color: #4c4343;
+    padding: 1rem;
+    padding-block: 3rem;
+    /* margin: 0; */
+}
+ul a{
+    text-decoration: none;
+    /* border: 1px solid #4c4343; */
+    text-align: center;
+    color: white;
+
+}
