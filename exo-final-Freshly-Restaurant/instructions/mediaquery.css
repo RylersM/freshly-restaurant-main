@@ -1,0 +1,42 @@
+@media screen and (max-width: 780px) {
+    .welcome {
+        flex-wrap: nowrap;
+        padding-block: 2em;
+    }
+
+    .welcome p {
+        line-height: 1.5;
+    }
+
+    .specmenu {
+        flex-flow: row wrap;
+        flex-direction: column;
+        columns: 1;
+        padding: 1.3rem;
+    }
+
+    .location {
+        padding: 1.3rem;
+    }
+}
+
+
+/* @media screen and (min-width: 780px) and (max-width: ) {
+    .welcome {
+        flex-wrap: nowrap;
+        padding-block: 2em;
+    }
+
+    .welcome p {
+        line-height: 1.5;
+    }
+
+    .specmenu {
+        flex-direction: column;
+        padding: 1.3rem;
+    }
+
+    .location {
+        padding: 1.3rem;
+    }
+} */
