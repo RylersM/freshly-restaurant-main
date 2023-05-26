@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts</title>
-    <link rel="icon" href="./ressources/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="./ressources/images/logo.png">
     <script src="https://kit.fontawesome.com/a62ea980a6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="theme.css">
 </head>
@@ -24,8 +24,8 @@
         <nav>
             <ul>
                 <li><a href="./Freshly.html">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menus</a></li>
+                <li><a href="./FreshlyAbout.html">About</a></li>
+                <li><a href="./FreshlyMenu.html">Menus</a></li>
                 <li><a href="./FreshlyContact.html">Contact</a></li>
             </ul>
         </nav>
@@ -34,21 +34,31 @@
         <section class="contact">
             <h2>Contact us</h2>
             <p>If you want to make a reservation, please complete this form.</p>
-            <p>Fields with * are required.</p>
+            <p>Fields with <span>*</span>are required.</p>
             <div class="reserv">
-                <form action="" method="post">
-                    <fieldset>
+                <form action="" method="post" class="contacts">
+                    <fieldset class="fil2">
                         <legend>Reservation</legend>
-                        <label for="namedate">Date</label><br>
-                        <input type="date" id="namedate"><br>
-                        <label for="ntime">Time</label><br>
-                        <input type="time" id="ntime"><br>
-                        <label for="nnumb">Number of guests</label><br>
+                        <label for="namedate"><span>*</span>Date</label>
+                        <input type="date" id="namedate">
+                        <label for="ntime"><span>*</span>Time</label>
+                        <input type="time" id="ntime">
+                        <label for="nnumb"><span>*</span> Number of guests</label>
                         <input type="number" id="nnumb">
                     </fieldset>
-                    <fieldset>
-                        <label for="lname">Name</label><br>
+                    <fieldset class="fil2">
+                        <legend>Details</legend>
+                        <label for="lname"><span>*</span>Name</label>
                         <input type="text" id="lname">
+                        <label for="mail">Email</label>
+                        <input type="email" id="mail">
+                        <label for="telname"><span>*</span>Telephone</label>
+                        <input type="tel" id="telname">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Further request</legend>
+                        <textarea name="" id="" cols="125" rows="10"></textarea>
+                        <div class="sub"><input type="submit" value="Reserve" class="submit"></div>
                     </fieldset>
                 </form>
             </div>
@@ -57,7 +67,7 @@
     </main>
     <footer class="footer">
         <div class="bas-page">
-            <div class="bs-page">
+            <div class="bs-page main">
                 <section>
                     <h4>Opening hours</h4>
                     <p>Monday Closed</p>
@@ -85,7 +95,7 @@
             </div>
         </div>
         <div class="pied-de-page">
-            <img src="../../logo-3wa.png" alt="Propriété de la 3W Academy">
+            <img src="../logo-3wa.png" alt="Propriété de la 3W Academy">
             <p>Ce exercice de la <a href="#">3W Academy</a> est lis à disposition <a href="#">pour l'usage personnel des
                     étudiants. Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification -
                     International - </a><br> Les autorisations au-delà du champ de cette licence peuvent être obtenues

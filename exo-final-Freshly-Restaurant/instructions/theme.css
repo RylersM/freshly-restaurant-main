@@ -1,5 +1,6 @@
 /* @import url(./mediaquery.css); */
 @import url(./fontface.css);
+@import url();
 
 body {
     margin-inline: auto;
@@ -10,6 +11,8 @@ body {
     margin-bottom: 0;
 }
 
+/*/////////////////////////////////
+////////////////Le Header///////////////////////////*********** */
 .header {
     display: flex;
     align-items: center;
@@ -48,7 +51,7 @@ nav a:hover {
 }
 
 .main {
-    width: 980px;
+    max-width: 980px;
     margin-inline: auto;
 }
 
@@ -66,7 +69,7 @@ ul {
     padding: 0;
 }
 
-figure a{
+figure a {
     display: flex;
     align-items: center;
     /* background-image: linear-gradient(var(--crl-second), var(--clr-cinquieme), var(--clr-quatrieme)); */
@@ -146,6 +149,21 @@ h4 {
     font-size: 18px;
 }
 
+/*/////////////////////////////////
+////////////////Le Main///////////////////////////*********** */
+.img-deroul {
+    position: relative;
+}
+
+.slick-next {
+    right: 2rem;
+}
+
+.slick-prev {
+    left: 2rem;
+    z-index: 3;
+}
+
 .welcome {
     flex-wrap: nowrap;
     padding-block: 2em;
@@ -194,10 +212,16 @@ article a {
     max-width: 90%;
     margin-inline: auto;
     padding: 0.5rem;
+    transition-property: all;
+    transition: 2s ease;
 }
 
 article img {
     width: 100%;
+}
+.specmenu a:hover{
+    background-color: var(--clr-troisieme);
+    transform: scale(1.1);
 }
 
 /* .meat-menu:hover {} */
@@ -232,13 +256,15 @@ a img {
 
 .bs-page {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 20px;
     /* width: 90%; */
-    margin-inline: auto;
+    /* margin-inline: auto; */
 }
 
 .bas-page section {
-    width: 10%;
+    flex-basis: calc((100% / 3) - 20px);
+
 }
 
 .footer {
@@ -247,6 +273,7 @@ a img {
     justify-content: center;
     text-align: center;
     margin: 0;
+    margin-top: 2.5rem;
 }
 
 .footer img {
@@ -296,10 +323,244 @@ address a {
 
 /* ********************************************************
 Partir de About */
-.dinsalle{
+.dinsalle {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     row-gap: 1.5rem;
     padding: 2.5rem;
+}
+
+/* ********************************** 
+Partir contact*/
+.contact p {
+    text-align: center;
+}
+
+.contact p:nth-last-child(2) {
+    font-style: italic;
+}
+
+.reserv {
+    padding: 1rem;
+    background-color: var(--crl-second);
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contacts input {
+    margin-inline: auto;
+    line-height: 1.7;
+    width: 95%;
+
+}
+
+.contacts fieldset {
+    border: none;
+    padding-left: 0;
+    padding-bottom: 1rem;
+}
+
+.fil2 {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+fieldset {
+    padding-bottom: 2rem;
+}
+
+.reserv textarea {
+    width: 100%;
+    border-radius: 0.5rem;
+    resize: none;
+}
+
+.sub {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.submit {
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--crl-principale);
+    color: var(--clr-quatrieme);
+}
+
+span {
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.5rem;
+    border-bottom: 1px dotted;
+    color: var(--clr-troisieme);
+}
+
+label::before {
+    content: "";
+}
+
+label {
+    margin-bottom: 0.5rem;
+    /* padding-bottom: 2rem; */
+}
+
+.fil2 label:nth-of-type(2) {
+    margin-left: 0;
+}
+
+legend {
+    font-family: "Merienda";
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+/* ////////////////////////////////////////////////
+///////La partie de la page menu//////////////////
+////////////////////////////////////////////// */
+.menu {
+    text-align: center;
+}
+
+button {
+    justify-content: space-around;
+    padding: 0.3rem;
+    padding-inline: 1.8rem;
+    margin-bottom: 1rem;
+    border: 1px var(--crl-second);
+    font-family: "Athiti";
+    font-weight: 700;
+    background-color: var(--crl-second);
+    color: var(--crl-principale);
+    transition-property: all;
+    transition: 4s ease;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--clr-troisieme);
+    color: var(--clr-cinquieme);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+    row-gap: 1.5rem;
+    padding: 0.5rem;
+    padding-block: 2rem;
+    background-color: var(--crl-second);
+}
+
+.gallery img {
+    width: 100%;
+}
+
+body {
+    height: 100vh;
+}
+
+.deserts {
+    text-align: center;
+}
+
+.desert img {
+    width: 100%;
+}
+
+.desert {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+    row-gap: 1.5rem;
+    padding: 0.5rem;
+    padding-block: 2rem;
+    background-color: var(--crl-second);
+}
+
+.cocktail img {
+    width: 100%;
+}
+
+.cocktails {
+    text-align: center;
+}
+
+.cocktail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.5rem;
+    row-gap: 1.5rem;
+    padding: 0.5rem;
+    padding-block: 2rem;
+    background-color: var(--crl-second);
+}
+
+.cokt-img {
+    position: relative;
+    cursor: pointer;
+}
+
+.img-surv {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.survol {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(76, 67, 67, .9);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: 2s ease;
+    transition: 2s ease;
+}
+
+.text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    color: white;
+    font-family: "Merienda";
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: 6px solid white;
+    justify-content: center;
+    align-items: center;
+}
+.text p{
+    font-size: 20px;
+}
+.text img {
+    width: 30px;
+    padding-right: 0.5rem;
+}
+
+.cokt-img:hover .survol {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
 }
