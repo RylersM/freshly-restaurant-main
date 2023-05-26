@@ -173,7 +173,11 @@ h4 {
 .welcome p {
     line-height: 1.5;
 }
-
+.art-menu{
+    display: flex;
+    gap: 1.5rem;
+    max-width: 100%;
+}
 .menu div {
     padding: 1em;
     background-color: #817676;
@@ -188,8 +192,10 @@ nav ul {
 }
 
 .specmenu {
+    display: flex;
+    flex-direction: column;
     column-count: 3;
-    padding: 1.3rem;
+    /* padding: 1.3rem; */
 }
 
 .specmenu li {
