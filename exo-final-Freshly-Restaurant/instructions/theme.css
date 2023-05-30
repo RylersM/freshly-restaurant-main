@@ -17,8 +17,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-block: 1.5rem;
     margin-inline: auto;
-    max-width: 980px;
+    max-width: 1480px;
+    width: 80%;
 }
 
 .header ul {
@@ -52,7 +54,8 @@ nav a:hover {
 }
 
 .main {
-    max-width: 980px;
+    max-width: 1480px;
+    width: 80%;
     margin-inline: auto;
 }
 
@@ -70,7 +73,7 @@ ul {
     padding: 0;
 }
 
-figure a {
+.heade a {
     display: flex;
     align-items: center;
     /* background-image: linear-gradient(var(--crl-second), var(--clr-cinquieme), var(--clr-quatrieme)); */
@@ -88,7 +91,7 @@ figure a {
 
 .location {
     float: right;
-    width: 55%;
+    width: 40%;
     margin: 0.6rem;
 }
 
@@ -166,18 +169,21 @@ h4 {
 }
 
 .welcome {
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     padding-block: 2em;
+    overflow: auto;
 }
 
 .welcome p {
     line-height: 1.5;
 }
-.art-menu{
+
+.art-menu {
     display: flex;
     gap: 1.5rem;
     max-width: 100%;
 }
+
 .menu div {
     padding: 1em;
     background-color: #817676;
@@ -188,7 +194,7 @@ nav ul {
     list-style: none;
     /* background-color: var(--clr-quatrieme); */
     padding: 1rem;
-    padding-block: 3rem;
+    /* padding-block: 3rem; */
 }
 
 .specmenu {
@@ -226,7 +232,8 @@ article a {
 article img {
     width: 100%;
 }
-.specmenu a:hover{
+
+.specmenu a:hover {
     background-color: var(--clr-troisieme);
     transform: scale(1.03);
 }
@@ -338,11 +345,13 @@ Partir de About */
     padding: 2.5rem;
     cursor: pointer;
 }
-.dinsalle img{
+
+.dinsalle img {
     transition-property: all;
     transition: 2s ease;
 }
-.dinsalle img:hover{
+
+.dinsalle img:hover {
     transform: scale(1.08);
 }
 
@@ -462,7 +471,8 @@ button {
     transition: 4s ease;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     background-color: var(--clr-troisieme);
     color: var(--clr-cinquieme);
 }
@@ -566,9 +576,11 @@ body {
     justify-content: center;
     align-items: center;
 }
-.text p{
+
+.text p {
     font-size: 20px;
 }
+
 .text img {
     width: 30px;
     padding-right: 0.5rem;
@@ -579,3 +591,118 @@ body {
     -ms-transform: scale(1);
     transform: scale(1);
 }
+
+
+/* ///////////////////////////Responsive Home/////////////// */
+/* //////Tablette//////////////// */
+@media screen and (max-width: 980px) and (min-width: 781px) {
+
+    .header,
+    .welcome{
+        /* display: flex; */
+        flex-direction: column;
+    }
+
+    .heade a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    nav {
+        justify-content: space-around;
+        width: 100%;
+        background-color: var(--crl-second);
+    }
+
+    .location {
+        float: none;
+        width: 90%;
+    }
+
+    .art-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .bs-page{
+        display: flex;
+        justify-content: space-around;
+    }
+    /* /////About///// */
+    video{
+        width: 100%;
+    }
+}
+
+/* ///////////Mobile//////////// */
+@media screen and (max-width: 780px){
+    .header,
+    .welcome,
+    .bs-page {
+        flex-direction: column;
+    }
+
+    nav ul{
+        flex-direction: column;
+        
+    }
+    .header ul{
+        justify-content: center;
+        gap: 0;
+        padding-inline: 0;
+        padding-block: 0;
+    }
+    nav li{
+        border: 1px solid var(--crl-principale);
+    }
+    .heade a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    nav {
+        justify-content: space-around;
+        width: 100%;
+        background-color: var(--crl-second);
+    }
+
+    .location {
+        float: none;
+        width: 90%;
+    }
+
+    .art-menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .bs-page{
+        display: flex;
+        justify-content: space-around;
+    }
+    video{
+        width: 100%;
+    }
+    /* /////About//// */
+    .dinsalle{
+        grid-template-columns: 1fr;
+    }
+    /* ///////////Menu/////////// */
+    .gallery,
+    .desert,
+    .cocktail{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* //////////Contacts//////// */
+    .fil2{
+        flex-basis: 100%;
+    }
+}
+
+/* ///////////// */
