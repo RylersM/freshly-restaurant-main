@@ -435,6 +435,7 @@ fieldset {
     border-radius: 0.5rem;
     background-color: var(--crl-principale);
     color: var(--clr-quatrieme);
+    cursor: pointer;
 }
 
 span {
